@@ -1,0 +1,27 @@
+.dashboard-item{
+  ul{
+    li{
+      @include flexbox();
+      @include align-items(center);
+      @include flex-flow(row wrap);
+
+      width: 100%;
+      padding-top: 0.4em;
+      i{
+        color: $color4;
+        width: 20px;
+        text-align: center;
+        font-size: 1.5em;
+        padding-right: 1em;
+      }
+      ul{
+        padding-left: 40px;
+        width: 100%;
+        font-size: 0.9em;
+        li{
+
+        }
+      }
+    }
+  }
+}

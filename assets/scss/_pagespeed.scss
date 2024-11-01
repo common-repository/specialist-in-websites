@@ -1,0 +1,67 @@
+.page_speed_result{
+  background-image: url("../images/loader.gif");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  min-height: 30vh;
+  margin-top: $gutter;
+  transition: all 0.2s ease;
+  &-loading{
+    background-size: 70px;
+    background-position: top left;
+  }
+  #chartContainer {
+    float: left;
+    width: 30%;
+    max-width: 500px;
+    margin: 0 auto $gutter / 2 auto;
+    text-align: center;
+  }
+  h3 {
+    margin-top: 0;
+    text-align: left;
+  }
+  table {
+    width: 70%;
+    margin-top: $gutter;
+    tbody {
+      border: 1px solid black;
+      padding: $gutter / 8 $gutter / 4;
+      margin: $gutter / 2 0;
+      position: relative;
+      display: grid;
+      .result {
+        padding-right: $gutter;
+        padding-top: 4px;
+      }
+      &:first-child{
+        margin-top: 0;
+      }
+      .showDetails {
+        position: absolute;
+        transition: all 1s;
+        cursor: pointer;
+        top: 10px;
+        right: $gutter / 2;
+        &.open {
+          @include transform(rotate(180deg));
+        }
+      }
+    }
+  }
+  #finalScreenshot {
+    padding-top: $gutter / 2;
+    text-align: center;
+  }
+
+  #speedPics {
+    text-align: center;
+  }
+
+  .speedPic {
+    border: solid 1px lightgrey;
+    display: inline-block;
+    margin: $gutter / 2;
+    text-align: center;
+  }
+}

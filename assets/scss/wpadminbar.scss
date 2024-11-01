@@ -1,0 +1,242 @@
+//@import "vendor/normalize";
+//@import "vendor/bourbon/bourbon";
+@import "mixins";
+@import "variables";
+
+.quicklinks .siw_edit_homepage_link .ab-item:before {
+  content: "\f102" !important;
+}
+
+html.wp-toolbar{
+  padding-top: $tb-height;
+  @media screen and (max-width: $mq-laptop){
+    padding-top: 0;
+  }
+}
+
+#wpadminbar {
+  background-color: $color1;
+  height: $tb-height;
+  * {
+    font-family: 'Tajawal';
+  }
+  #wp-admin-bar-wp-logo{
+    display: none;
+  }
+  .wp-admin-bar-wp-logo{
+    display: none !important;
+  }
+  .quicklinks{
+      .ab-top-menu{
+        //width: $sb-width;
+        float: left;
+        //background: darken($color3, 10%);
+      }
+      .ab-top-secondary{
+        float: right;
+        height: $tb-height;
+        @media screen and (max-width: $mq-laptop){
+          height: $tb-height-mq;
+        }
+      }
+      #wp-admin-bar-my-account{
+        float: left;
+        line-height: 1;
+        height: $tb-height;
+        @media screen and (max-width: $mq-laptop){
+          height: $tb-height-mq;
+        }
+        &:hover a, &.hover a, &.hover a::before, &:hover a::before{
+          background: transparent;
+          color: #eee !important;
+        }
+        a{
+          display: inline-block;
+          width: auto;
+          padding: 0;
+          color: #eee;
+          img{
+            display: none;
+          }
+        }
+        .ab-sub-wrapper{
+          display: inline-block !important;
+          float: left;
+          min-width: auto !important;
+          width: auto;
+          position: relative;
+          background: transparent;
+          box-shadow: none;
+          #wp-admin-bar-user-actions{
+            @include flexbox();
+            @include align-items(center);
+            padding: 0;
+            height: $tb-height;
+            @media screen and (max-width: $mq-laptop){
+              height: $tb-height-mq;
+            }
+            li{
+              display: inline-block;
+              width: auto;
+              float: left;
+              margin: 0;
+              padding: 0;
+              line-height: 1;
+              a{
+                float: left;
+                line-height: 1;
+                min-width: auto;
+                height: auto;
+              }
+              span{
+                line-height: 1;
+              }
+              &#wp-admin-bar-user-info{
+                a{
+                  .display-name{
+                    width: 50%;
+                    margin-right: 0.5em;
+                  }
+                }
+              }
+              &#wp-admin-bar-edit-profile{
+                margin-right: 0.5em;
+                &:hover{
+                  a, a:before{
+                    opacity: 1;
+                    //color: $good !important;
+                  }
+                }
+                a{
+                  color: transparent !important;
+                  width: 14px;
+                  height: 14px;
+                  opacity: 0.8;
+                  background-image: url("../images/wp-edit.svg");
+                  background-size: contain;
+                }
+              }
+              &#wp-admin-bar-logout{
+                margin-right: 0.5em;
+                &:hover{
+                  a, a:before{
+                    opacity: 1;
+                    //color: $error !important;
+                  }
+                }
+                a{
+                  color: transparent !important;
+                  width: 14px;
+                  height: 14px;
+                  opacity: 0.6;
+                  transition: all 0.3s ease;
+                  background-image: url("../images/wp-logout.svg");
+                  background-size: contain;
+                }
+              }
+              span{
+                height: auto;
+                display: inline-block;
+                float: left;
+              }
+            }
+          }
+          img{
+            display: inline-block;
+            position: relative;
+            float: left !important;
+            left: 0; top: 0;
+            line-height: 1;
+            width: $tb-height / 4 * 3;
+            height: auto;
+            margin: 0 0.5em;
+            border-radius: 50%;
+            border: 0;
+            box-shadow: 0px 0px 1px #222;
+          }
+        }
+      }
+      #wp-admin-bar-root-default { // first-menus
+        li {
+          a, span, span:before, a:before {
+            color: white !important;
+            opacity: 1 !important;
+          }
+          &:hover, &.hover {
+            a, span:before, span, a:before {
+              background-color: $color3;
+              color: white !important;
+              opacity: 1 !important;
+            }
+            ul {
+              background: $color1 !important;
+              li, a, span {
+                transition: all 0.2s ease;
+                background: transparent !important;
+                &:hover {
+                  div:not(.yoast-issue-counter) {
+                    a, span {
+                      background-color: $color3;
+                      color: white !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  .yoast-issue-counter{
+    background-color: $color4;
+    span{
+      background-color: transparent !important;
+    }
+  }
+  #adminmenu .awaiting-mod, #adminmenu .update-plugins{
+    background-color: $color4;
+    width: 16px;
+    height: 16px;
+    float: left;
+    padding: 0;
+    margin-right: 5px;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+  }
+}
+//Buddypress important styling issues
+#wp-admin-bar-my-account {
+  > .ab-sub-wrapper {
+    #wp-admin-bar-my-account-buddypress {
+      display: none !important;
+    }
+    &:hover, &:focus, &:active {
+      #wp-admin-bar-my-account-buddypress {
+        display: block !important;
+        position: absolute;
+        li {
+          display: inline-block;
+          .ab-item {
+            position: relative;
+            float: right;
+            padding-left: 25px;
+          }
+          >.ab-sub-wrapper {
+            position: absolute;
+            ul{
+              display: none !important;
+            }
+          }
+          &:hover, &:focus, &:active {
+            >.ab-sub-wrapper {
+              ul {
+                display: block !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

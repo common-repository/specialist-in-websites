@@ -1,0 +1,47 @@
+/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2018 Colophon Foundry
+ *
+ * Licenced to Swen Hol Specialist in Websites
+ */
+
+@font-face {
+  font-family: 'apercu-bold';
+  src: url('../fonts/apercu-bold.eot');
+  src: url('../fonts/apercu-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/apercu-bold.woff') format('woff'),
+  url('../fonts/apercu-bold.woff2') format('woff2'),
+  url('../fonts/apercu-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+//@font-face { // werkt niet ? :/
+//  font-family: 'Tajawal';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: url('../fonts/Tajawal-Regular.woff2') format('woff2'),
+//  url("../fonts/Tajawal-Regular.ttf") format('truetype');
+//  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+//}
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Tajawal-Medium.woff2') format('woff2'),
+  url("../fonts/Tajawal-Medium.ttf") format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Tajawal-Bold.woff2') format('woff2'),
+  url("../fonts/Tajawal-Bold.ttf") format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

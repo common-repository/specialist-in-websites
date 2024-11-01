@@ -1,0 +1,35 @@
+.ie-error {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.ie-error div {
+  background-color: white;
+  padding: 20px; }
+
+.ie-error a {
+  text-decoration: underline;
+  color: #0063d7;
+  cursor: pointer; }
+
+#siw_pop_up_close {
+  cursor: pointer;
+  border: 1px solid #0063d7;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  background-color: #0063d7; }
+
+#siw_pop_up_close:hover {
+  color: #0063d7;
+  background-color: white; }
+
+/*# sourceMappingURL=siw_front_end.css.map */

@@ -1,0 +1,53 @@
+.input_image{
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-bottom: 1em;
+  @include object-fit(contain, left);
+}
+
+@media (min-width: 960px) {
+  .auto-fold .components-notice-list {
+    left: $sb-width;
+  }
+}
+
+.block-editor{
+  .components-notice-list {
+    left: 0 !important;
+  }
+}
+
+.edit-post-layout__content{
+  overflow-y: visible;
+}
+
+.removeCache{
+  .notice-dismiss{
+    display: none;
+  }
+  a{
+    position: absolute;
+    top: 0;
+    right: 1px;
+    border: none;
+    margin: 0;
+    padding: 9px;
+    background: 0 0;
+    color: #72777c;
+    cursor: pointer;
+    text-decoration: none;
+    &:before{
+      background: 0 0;
+      color: #72777c;
+      content: "\f153";
+      display: block;
+      font: normal 16px/20px dashicons;
+      speak: none;
+      height: 20px;
+      text-align: center;
+      width: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #353535;
+    color: white; }
+    body #adminmenu, body #adminmenu .wp-submenu, body #adminmenuback, body #adminmenuwrap {
+      background: #1f1f1f; }
+
+  h1, h2, h3, h4 {
+    color: white; }
+
+  select {
+    background-color: #353535;
+    color: white; }
+
+  .wp-core-ui .button, .wp-core-ui .button-secondary {
+    background-color: #353535;
+    color: white; }
+
+  .form-table th, .form-wrap label {
+    color: white; }
+
+  .siw_wp_ajax_save .submit .submit-backup {
+    color: white; } }
+
+/*# sourceMappingURL=darkmode.css.map */
